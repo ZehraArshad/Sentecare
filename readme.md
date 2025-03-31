@@ -5,7 +5,8 @@ SentimentCare is an AI-powered chatbot built in just one day to analyze user sen
 [Website Link](https://sentecare.streamlit.app/)
 
 
-![alt text](image.png)
+![alt text](image-1.png)
+
 
 
 [Entered in Agentic AI Innovation Challenge 2025](https://app.readytensor.ai/publications/sentiment-care-YezPtJJheT35)
