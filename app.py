@@ -2,7 +2,6 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 
-# ✅ Use Streamlit Secrets for API key (no need for dotenv)
 API_TOKEN = st.secrets["API_TOKEN"] if "API_TOKEN" in st.secrets else None
 
 # if API_TOKEN:
@@ -10,11 +9,9 @@ API_TOKEN = st.secrets["API_TOKEN"] if "API_TOKEN" in st.secrets else None
 # else:
 #     st.error("API Token Not Found! ❌ Please check Streamlit Secrets.")
 
-# ✅ Define Hugging Face API URL & Headers
 SENTIMENT_API_URL = "https://api-inference.huggingface.co/models/bhadresh-savani/distilbert-base-uncased-emotion"
 HEADERS = {"Authorization": f"Bearer {API_TOKEN}"} if API_TOKEN else {}
 
-# ✅ Function to query sentiment analysis model
 def query_sentiment(text):
     if not API_TOKEN:
         return {"error": "Missing API Token"}
@@ -30,7 +27,6 @@ def query_sentiment(text):
     else:
         return {"error": f"API Error {response.status_code}"}
 
-# ✅ Function to fetch suicide hotline information
 def get_hotline(country):
     url = "https://blog.opencounseling.com/suicide-hotlines/"
     try:
@@ -45,7 +41,6 @@ def get_hotline(country):
     except requests.exceptions.RequestException:
         return "Error fetching hotline data."
 
-# ✅ Streamlit UI
 st.title("💙 Sentiment Care")
 st.write("This app analyzes your emotions and provides hotline information if needed.")
 

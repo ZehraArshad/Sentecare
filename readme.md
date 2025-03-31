@@ -23,7 +23,7 @@ SentimentCare is an AI-powered chatbot built in just one day to analyze user sen
 
 - APIs: Hugging Face Inference API for sentiment analysis
 
-- Web Scraping: BeautifulSoup to fetch mental health hotline information
+- Hotline Information: [Hotlines According to Countries](https://blog.opencounseling.com/suicide-hotlines/)
 
 - Language: Python
 
